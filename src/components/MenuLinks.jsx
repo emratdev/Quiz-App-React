@@ -9,14 +9,14 @@ function MenuLinks() {
     data: quizzes,
     isPending,
     error,
-  } = useFetch("http://localhost:3000/quizzes");
+  } = useFetch("https://json-api.uz/api/project/emrat-frontend-quizz/quizzes");
   return (
     <div>
       {isPending && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <div className="menu-list">
         {quizzes &&
-          quizzes.map((item) => {
+          quizzes.data.map((item) => {
             return (
               <Link to={'/quiz/${item.title}'} key={item.title} className="menu-item header-logo">
                 <figure style={{ backgroundColor: item.color }}>
