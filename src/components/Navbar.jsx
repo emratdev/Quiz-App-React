@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 
 // react-router-dom imports
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 const toggleMode = () => {
